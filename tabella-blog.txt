@@ -1,0 +1,13 @@
+Tabella Blog
+
+Colonne:
+
+Id - numero - INT - PRIM KEY (AUTO_INCREMENT - UNIQUE)
+Nome - stringa - VARCHAR (100) - NOTNULL
+Cognome - stringa - VARCHAR (30) - NOTNULL
+Email - stringa - VARCHAR (250) - NOTNULL
+Eta - numero - INT - NOTNULL
+Data - YEAR - NOTNULL
+Commento - stringa - VARCHAR (250) - NOTNULLL
+
+
