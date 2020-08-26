@@ -8,7 +8,7 @@ $users = [
     'cognome'=> 'Jagger',
     'eta' => 77,
     'email' => 'jagger@mail.it',
-    'commento' => 'Ai Rolling Stones dò al massimo altri due anni'
+    'commento' => 'Ai Rolling Stones dò al massimo altri due anni (1964).'
 
   ],
   [
@@ -26,11 +26,11 @@ $users = [
     'cognome'=> 'Bowie',
     'eta' => 54,
     'email' => 'bowie@mail.it',
-    'commento' => 'Non so dove sto andando da qui ma vi prometto che non sarà noioso'
+    'commento' => 'Non so dove sto andando da qui ma vi prometto che non sarà noioso (Epitaffio).'
   ]
 ];
 
-foreach ($users as $key => $user) {
+foreach ($users as $user) {
   $utente = new User($user['id'], $user['nome'],$user['cognome'],$user['email'],$user['eta'], $user['commento']);
     echo 'Id Utente: ' . $user['id'] . '<br>';
     echo 'Nome: ' . $user['nome'] . '<br>';
