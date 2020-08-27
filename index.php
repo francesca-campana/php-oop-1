@@ -31,13 +31,20 @@ $users = [
 ];
 
 foreach ($users as $user) {
-  $utente = new User($user['id'], $user['nome'],$user['cognome'],$user['email'],$user['eta'], $user['commento']);
-    echo 'Id Utente: ' . $user['id'] . '<br>';
-    echo 'Nome: ' . $user['nome'] . '<br>';
-    echo 'Cognome: ' . $user['cognome'] . '<br>';
-    echo 'Email: ' . $user['email'] . '<br>';
-    echo 'Età: ' . $user['eta'] . '<br>';
-    echo 'Commento: ' . $user['commento'] . '<br>' . '<br>';
+	$utente = new User($user['id'], $user['nome'],$user['cognome'],$user['email'],$user['eta'], $user['commento']);
+	$user_data = $utente->getUserData();
+
+	?>
+		<div>
+			<ul>
+				<li>Nome: <?php echo $user_data['nome']; ?></li>
+				<li>Cognome: <?php echo $user_data['cognome']; ?></li>
+				<li>Email: <?php echo $user_data['email']; ?></li>
+				<li>Età: <?php echo $user_data['eta']; ?></li>
+				<li>Può commentare: <?php echo $user_data['commento']; ?></li>
+			</ul>
+		</div>
+	<?php
 }
 
 ?>
